@@ -13,7 +13,7 @@ NewsClues is one of my project where I developed a NLP framework that prioritize
 
 Following is the NLP framework that I developed:
 
-![nlp](https://github.com/UtsavManiar/PublicNews/blob/main/diagrams/Screen%20Shot%202020-08-07%20at%201.04.45%20PM.png)
+![nlp](https://github.com/UtsavManiar/NewsClues/blob/main/diagrams/NLP%20Framework.png)
 
 I scraped the Wikipedia pages related to each crime and generated the word embeddings.
 * Scraped Wikipedia pages using BeautifulSoup library.
@@ -32,7 +32,7 @@ NewsClues gives a prioritized list of records by comparing word embeddings gener
 
 Following is the scoring mechanism that returns final prioritized list for each risk tier:
 
-![score](https://github.com/UtsavManiar/PublicNews/blob/main/diagrams/Screen%20Shot%202020-08-07%20at%201.04.53%20PM.png)
+![score](https://github.com/UtsavManiar/NewsClues/blob/main/diagrams/Scoring%20Framework.png)
 
 NewsClues counts the number of linked parties and number of external sources attached to the person, returning the prioritized list by assigning a score for each tier separately.
 * Load the risk calculated World-Check csv file.
