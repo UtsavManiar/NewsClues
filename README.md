@@ -1,5 +1,7 @@
 #### Project Description
 
+https://github.com/UtsavManiar/NewsClues
+
 NewsClues is one of my project where I developed a NLP framework that prioritizes a least of High Risk people based on risk factor and score. All these people are involved in some type of financial crimes. I gathered a private database "World Check" from a company called Refinitive. * This database contains names of high risk people from around the world and a summary of each person describing why they are high risk. The Machine Learning Model that is part of this NLP framework focuses on identifying the keywords in the summary from database and comparing them against a set tier hierarchy which contains financial crimes that are classified as low, medium or high risk/importance. Based on the comparison the person is assigned a score which identifies the tier they belongs to. 
 
 *Since the dataset is private, I can not upload it, that's why I have changed it to dummy data. You can see the dummy data in the file "sample_data.csv"
