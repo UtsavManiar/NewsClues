@@ -15,18 +15,18 @@ Following is the NLP framework that I developed:
 
 ![nlp](https://github.com/UtsavManiar/NewsClues/blob/main/diagrams/NLP%20Framework.png)
 
-I scraped the Wikipedia pages related to each crime and generated the word embeddings.
+I scraped the Wikipedia pages related to each crime and generated the word embeddings. Following are the steps involved in it:
 * Scraped Wikipedia pages using BeautifulSoup library.
 * Performed the pre-processing steps.
-* Generated TF-IDF vector and merged the TF-IDF vector for each tier by only considering top 30 words for each crime.
+* Generated TF-IDF vector and merged the TF-IDF vector for each tier by only considering top 30 words for each crime. Following are the steps involved in it:
 * Generated TF-IDF weighted word embeddings and averaged the word embeddings for each tier. We used pre-trained word2vec model to generate the word embeddings.
 
 NewsClues gives a prioritized list of records by comparing word embeddings generated from extracted words with the word embedding associated with each tier.
-* Loading World-Check data which contains 84000+ records (only Canadian data is used.)
+* Load World-Check data which contains 84000+ records (only Canadian data is used.)
 * Performed the pre-processing steps.
-* Generate the word embedding for each record by tokenizing the text.
-* Compare word embedding of each record with word embeddings of all 3 tiers using Cosine similarity.
-* Return the risk rated World-Check data in the csv format.
+* Generated the word embedding for each record by tokenizing the text.
+* Compared word embedding of each record with word embeddings of all 3 tiers using Cosine similarity.
+* Returedn the risk rated World-Check data in the csv format.
 
 ### Scoring Mechanism
 
@@ -34,7 +34,7 @@ Following is the scoring mechanism that returns final prioritized list for each 
 
 ![score](https://github.com/UtsavManiar/NewsClues/blob/main/diagrams/Scoring%20Framework.png)
 
-NewsClues counts the number of linked parties and number of external sources attached to the person, returning the prioritized list by assigning a score for each tier separately.
+NewsClues counts the number of linked parties and number of external sources attached to the person, returning the prioritized list by assigning a score for each tier separately. Following are the steps involved in it:
 * Load the risk calculated World-Check csv file.
 * Count number of linked parties and assign the score based on the ranges that were defined in the scoring algorithm section above.
 * Count number of external sources the person is mentioned in and assign the score based on the ranges that were defined in the scoring algorithm section above.
@@ -64,6 +64,3 @@ Following is the description of each Jupyter Notebook:
 
 #### 5. Scoring.ipynb
 * This notebook caculates the score of each record for each predicted tier seperately by taking into account the count of linked parties involved and number of external sources the person is mentioned in and returns the ordered list
-
-
-
